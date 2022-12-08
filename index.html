@@ -38,21 +38,45 @@
                 <div class="form-input-elements">
                   <div class="form-group">
                     <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" name="firstName" />
+                    <input
+                      required
+                      type="text"
+                      id="first-name"
+                      name="firstName"
+                    />
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email" />
+                    <input required type="text" id="email" name="email" />
                     <label for="password">Password</label>
-                    <input type="text" id="password" name="password" />
+                    <input
+                      required
+                      type="password"
+                      id="password"
+                      name="password"
+                    />
+                    <p class="password-confirmation-error">
+                      *Passwords must match
+                    </p>
                   </div>
                   <div class="form-group">
                     <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="lastName" />
-                    <label for="phone-number">Phone Number</label>
-                    <input type="text" id="phone-number" name="phoneNumber" />
-                    <label for="confirm-password">Confirm Password</label>
                     <input
+                      required
                       type="text"
-                      id="confirm-password"
+                      id="last-name"
+                      name="lastName"
+                    />
+                    <label for="phone-number">Phone Number</label>
+                    <input
+                      required
+                      type="text"
+                      id="phone-number"
+                      name="phoneNumber"
+                    />
+                    <label for="password-confirmation">Confirm Password</label>
+                    <input
+                      required
+                      type="password"
+                      id="password-confirmation"
                       name="confirmPassword"
                     />
                   </div>
@@ -71,5 +95,24 @@
         </form>
       </div>
     </section>
+    <script>
+      const password = document.querySelector("#password");
+      const passwordConfirmation = document.querySelector(
+        "#password-confirmation"
+      );
+      const error = document.querySelector("p.password-confirmation-error");
+      passwordConfirmation.addEventListener("blur", () => {
+        // Call the validatePassword() function and check the return value
+        if (password.value !== passwordConfirmation.value) {
+          password.classList.add("error");
+          passwordConfirmation.classList.add("error");
+          error.style.display = "block";
+        } else {
+          password.classList.remove("error");
+          passwordConfirmation.classList.remove("error");
+          error.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>
