@@ -13,6 +13,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #f9fafb;
 }
 
 .main-section {
@@ -52,26 +53,88 @@ body {
 }
 
 .main-section-group.form {
-  margin-left: 30px;
+  width: calc(100vw - 30%);
+}
+
+.title-section {
+  padding-top: 13%;
+  padding-bottom: 30px;
+  padding-left: 40px;
 }
 
 .main-section-group.form .title {
   font-size: 1.5rem;
   font-weight: bold;
-  max-width: 600px;
-  line-height: 1.5rem;
+  max-width: 700px;
+  line-height: 1.9rem;
 }
 
 .main-section-group.form .title:first-child {
-  margin-top: 20%;
   margin-bottom: 30px;
 }
 
 .form-input-elements {
   display: flex;
+  gap: 50px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
+}
+
+form {
+  margin-top: 20px;
+  box-shadow: 0 2px black;
+}
+
+form p {
+  font-size: 1.2rem;
+}
+
+form label {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  margin-top: 15px;
+}
+
+form input {
+  width: 200px;
+  padding: 3px 10px;
+  border: 1px solid #e6e8eb;
+  border-radius: 5px;
+}
+
+form input:focus-visible {
+  border-color: #6b82de;
+  box-shadow:inset 0 0 5px 5px #888;
+}
+
+.form-padding-wrapper {
+  padding: 40px;
+}
+
+.top-form-section-shadow-wrapper {
+  box-shadow: -6px 0 transparent, 6px 0 transparent, 0 7px 5px -5px #b5b5b5;
+  background: white;
+}
+
+button {
+  background-color: #5d6c4c;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 40px;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px black;
+}
+
+.password-recovery {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.password-recovery a {
+  color: #5d6c4c;
+  font-weight: bold;
 }
