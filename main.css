@@ -84,7 +84,6 @@ body {
 
 form {
   margin-top: 20px;
-  box-shadow: 0 2px black;
 }
 
 form p {
@@ -102,7 +101,6 @@ form input {
   padding: 3px 10px;
   border: 1px solid #e5e7eb;
   border-radius: 5px;
-  box-shadow: 0 0 10px 10px #888;
 }
 
 input.password-confirmation-error {
